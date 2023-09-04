@@ -1,4 +1,10 @@
-const EmptyState = () => {
+import { User } from "@prisma/client";
+import getCurrentUser from "../actions/getCurrentUser";
+interface AvatarProps {
+  user?: User;
+};
+const EmptyState:React.FC<AvatarProps>  = ({user}) => {
+  
     return ( 
       <div 
         className="
@@ -16,7 +22,7 @@ const EmptyState = () => {
       >
         <div className="text-center items-center flex flex-col">
           <h3 className="mt-2 text-2xl font-semibold text-gray-900">
-            Select a chat or start a new conversation
+ Hello {user?.name} start you conversation Messagers !
           </h3>
         </div>
       </div>
