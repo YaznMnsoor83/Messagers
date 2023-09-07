@@ -1,9 +1,7 @@
 import { User } from "@prisma/client";
 import getCurrentUser from "../actions/getCurrentUser";
-interface AvatarProps {
-  user?: User;
-};
-const EmptyState:React.FC<AvatarProps>  = ({user}) => {
+
+const EmptyState  = ({}) => {
   
     return ( 
       <div 
@@ -22,7 +20,7 @@ const EmptyState:React.FC<AvatarProps>  = ({user}) => {
       >
         <div className="text-center items-center flex flex-col">
           <h3 className="mt-2 text-2xl font-semibold text-gray-900">
- Hello {user?.name} start you conversation Messagers !
+ No conversation start you conversation 
           </h3>
         </div>
       </div>
